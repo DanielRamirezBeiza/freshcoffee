@@ -1,0 +1,32 @@
+La clave esta en manejar correctamente el router
+
+Ejemplo:
+
+
+const router = createBrowserRouter([
+    {
+        path:'/',
+        element: <Layout />,
+        children:[
+            {
+                index: true,
+                element: <Inicio />
+            }
+        ]
+    },
+    {
+        path:'/auth',
+        element: <AuthLayout />,
+        children: [
+            {
+                path: '/auth/login',
+                element: <Login />
+            }
+        ]
+
+    }
+
+])
+export default router
+
+En este ejemplo la función de index:true se refiere a la ruta inicial, pero en caso de querer trabajar con una raiz ramificada se asignan paths por cada ramificación
