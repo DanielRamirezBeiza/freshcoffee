@@ -18,8 +18,6 @@ export default function Sidebar() {
               <Categoria
                 key={categoria.id}
                 categoria={categoria} />
-
-            
             ))}
 
 
