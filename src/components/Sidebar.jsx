@@ -16,10 +16,21 @@ export default function Sidebar() {
         <div className="mt-10">
             {categorias.map(categoria => (
               <Categoria
+                key={categoria.id}
                 categoria={categoria} />
 
             
             ))}
+
+
+        <div className="my-5 py-5">
+          <button
+            className="text-center bg-red-500 w-full px-3 font-bold text-white truncate cursor-pointer"
+            type="button"
+              >
+              Cancelar Orden
+          </button>
+        </div>
               
            
         </div>

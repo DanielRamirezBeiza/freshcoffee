@@ -9,10 +9,10 @@ export default function Layout() {
     <div className='md:flex'>
      <Sidebar />
      <main className='flex-1'>
-
-     </main>
-      <Outlet />
+     <Outlet />
       <Resumen />
+     </main>
+      
     </div>
   )
 }
