@@ -1,34 +1,30 @@
 const categorias = [
     {
-        icono: "cafe",
-        nombre: "Café",
+        icono: "Cultural",
+        nombre: "Cultural",
         id:1
       },
       {
-        icono: "hamburguesa",
-        nombre: "Hamburguesas",
+        icono: "Educacion",
+        nombre: "Educación",
         id: 2
       },
       {
-        icono: "pizza",
-        nombre: "Pizzas",
+        icono: "Salud",
+        nombre: "Salud",
         id: 3
       },
       {
-        icono: "dona",
-        nombre: "Donas",
+        icono: "Social",
+        nombre: "Social",
         id: 4
       },
       {
-        icono: "pastel",
-        nombre: "Pasteles",
+        icono: "policlinico",
+        nombre: "U. Policlínico",
         id: 5
       },
-      {
-        icono: "galletas",
-        nombre: "Galletas",
-        id: 6
-      }
+      
 ]
 
 export {

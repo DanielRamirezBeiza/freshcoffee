@@ -7,7 +7,7 @@ export default function Sidebar() {
 
   const {categorias} = useQuiosco()
   return (
-    <aside className="md:w-72">
+    <aside className="md:w-72 mx-5">
         <div className="p-4">
             <img
                 className="w-40"

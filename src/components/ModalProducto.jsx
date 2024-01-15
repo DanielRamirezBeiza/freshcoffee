@@ -36,17 +36,30 @@ export default function ModalProducto() {
                 {producto.nombre}
             </h1>
             <p className="mt-5 font-black text-5xl text-amber-500">
-                {formatearDinero(producto.precio)}
+               {producto.reembolso}
             </p>
+
+
+
             <div className="flex gap-4 mt-5">
+                <button>
+                   + 
+                </button>
+
                 <p className="text-3xl">{cantidad}</p>
+                <button>
+                    -
+                </button>
             </div>
 
             <button
                 type="button"
-                className="bg-indigo-600 hover:bg-indigo-800 px-5 py-2 mt-5 text-white font-bold uppercase rounded"
-                >Añadir pedido
+                onClick={handleClickModal}
+                className="bg-red-600 hover:bg-red-800 px-5 py-2 mt-5 text-white font-bold uppercase rounded"
+                >Salir
             </button>
+            <p className="whitespace-pre-line">{producto.reembolso}
+            </p>
 
         </div>
     </div>
