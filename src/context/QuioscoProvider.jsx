@@ -13,7 +13,7 @@ const [modal, setModal] = useState(false)
 const [producto, setProducto] = useState({})
 
 const handleClickCategoria = (id) => {
-  //console.log(id)
+  console.log(id)
   const categoria = categorias.filter(categoria => categoria.id === id)[0]
   //el arreglo [0] al final del código anterior es para que abra utilizar el primer objeto del arreglo mencionado
   setCategoriaActual(categoria)

@@ -14,14 +14,14 @@ export default function ModalProducto() {
   return (
   <>
     <div className="md:flex gap-10">
-        <div className="md:w-1/3">
+        <div className="md:w-1/5">
             <img
                 alt={`Imagen producto ${producto.nombre}`}
-                src={`/img/${producto.imagen}.jpg`}
+                src={`/img/logo.jpg`}
             />
 
         </div>
-        <div className="md:w-2/3">
+        <div className="md:w-4/5">
             <div className="flex justify-end">
                 <button
                     onClick={handleClickModal}
@@ -31,26 +31,48 @@ export default function ModalProducto() {
                     </svg>
                 </button>
             </div>
-
-            <h1 className="text-3xl font-bold mt-5">
-                {producto.nombre}
+            <p className="font-bold mt-5">{producto.tipo}: {producto.id}</p>
+            <h1 className="text-3xl font-bold mt-2">
+               {producto.nombre}
             </h1>
-            <p className="mt-5 font-black text-5xl text-amber-500">
-               {producto.reembolso}
+            <span className="m-10">{producto.descripcion}</span>
+            <p className="mt-5 font-black text-xl text-orange-600">
+               {producto.beneficio}
+            </p>
+            <p className="mt-1 font-black text-xl text-orange-600">
+               {producto.informacion_complementaria}
+            </p>
+            <br/>
+            <p className="text-wrap whitespace-pre-line">
+                Requisitos:
+                {producto.requisitos}
             </p>
 
+            
+           {/*Condicionante para beneficios con reglamento propio*/
+            producto.reglamento_propio ? 
+                <div className="mt-5">
+                    <p> Beneficio cuenta con reglamento propio</p>
+                    <p>Reglamento <a className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href={producto.link_reglamento}>Reglamento Subsidio por Estudios de Capacitación Servicio Bienestar I. Municipalidad Valparaíso</a></p>
+                </div>
+           : 
+                ''
+           } 
 
+            {
+                producto.coberturas ? 
+                
+                    <div className="mt-5">
+                       
+                        <p className="text-wrap whitespace-pre-line">Coberturas:
+                        {producto.coberturas}</p>
+                    </div>
+                : 
+                ''
+                
+            }
 
-            <div className="flex gap-4 mt-5">
-                <button>
-                   + 
-                </button>
-
-                <p className="text-3xl">{cantidad}</p>
-                <button>
-                    -
-                </button>
-            </div>
+      
 
             <button
                 type="button"

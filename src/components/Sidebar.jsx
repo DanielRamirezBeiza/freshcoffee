@@ -25,10 +25,10 @@ export default function Sidebar() {
 
         <div className="my-5 py-5">
           <button
-            className="text-center bg-red-500 w-full px-3 font-bold text-white truncate cursor-pointer"
+            className="text-center bg-red-500 w-full px-3 font-bold text-white "
             type="button"
               >
-              Cancelar Orden
+              Reiniciar
           </button>
         </div>
               
